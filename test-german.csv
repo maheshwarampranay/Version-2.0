@@ -1,0 +1,201 @@
+Applicant_ID,Ground_Truth_Label,Model_Prediction,Prediction_Probability,Age,Gender,Marital_Status,Employment_Type,Housing,Savings_Status,Credit_Amount,Duration_Months
+GER-0977,1,1,0.8599,42,Male,Single,>= 7 Years,Own,Unknown / No Savings,2427,18
+GER-0735,1,0,0.3309,29,Female,Divorced/Separated,< 1 Year,Own,Unknown / No Savings,3990,36
+GER-0615,1,1,0.6117,48,Male,Single,1 - 4 Years,Own,Unknown / No Savings,12204,48
+GER-0413,1,1,0.8478,40,Male,Single,1 - 4 Years,Rent,500 - 1000 DM,1597,10
+GER-0563,0,1,0.6102,37,Male,Single,1 - 4 Years,For Free,Unknown / No Savings,12389,36
+GER-0027,1,1,0.7286,42,Female,Divorced/Separated,1 - 4 Years,Rent,>= 1000 DM,409,12
+GER-0514,1,1,0.8659,54,Male,Single,< 1 Year,Own,Unknown / No Savings,2255,24
+GER-0624,0,0,0.4596,65,Male,Single,1 - 4 Years,For Free,< 100 DM,2600,18
+GER-0475,0,0,0.4029,26,Female,Divorced/Separated,< 1 Year,Rent,< 100 DM,3114,18
+GER-0991,1,1,0.777,34,Male,Single,>= 7 Years,Own,100 - 500 DM,1569,15
+GER-0975,1,1,0.6691,57,Female,Divorced/Separated,1 - 4 Years,Own,500 - 1000 DM,1258,24
+GER-0633,0,1,0.7937,19,Female,Divorced/Separated,< 1 Year,Rent,< 100 DM,1980,9
+GER-0192,0,1,0.5421,36,Male,Single,1 - 4 Years,Own,< 100 DM,3915,27
+GER-0998,0,0,0.1406,23,Male,Single,1 - 4 Years,For Free,< 100 DM,1845,45
+GER-0705,1,1,0.8681,35,Female,Divorced/Separated,>= 7 Years,For Free,500 - 1000 DM,5324,15
+GER-0248,1,0,0.463,26,Male,Single,1 - 4 Years,Own,< 100 DM,1925,24
+GER-0730,1,1,0.5303,33,Male,Single,< 1 Year,Own,< 100 DM,6403,24
+GER-0190,0,1,0.9214,54,Male,Single,1 - 4 Years,Own,>= 1000 DM,4591,24
+GER-0942,1,1,0.8376,31,Male,Single,4 - 7 Years,Own,Unknown / No Savings,929,24
+GER-0023,1,1,0.9082,44,Male,Single,< 1 Year,Own,100 - 500 DM,1804,12
+GER-0139,1,1,0.8867,44,Female,Divorced/Separated,1 - 4 Years,Rent,< 100 DM,1881,12
+GER-0056,0,1,0.8373,52,Male,Single,Unemployed,Own,Unknown / No Savings,6468,12
+GER-0474,0,0,0.3667,33,Male,Married,1 - 4 Years,Own,< 100 DM,1245,18
+GER-0305,1,1,0.9592,33,Male,Divorced/Separated,1 - 4 Years,Own,>= 1000 DM,1543,6
+GER-0489,1,1,0.9094,26,Male,Single,1 - 4 Years,Rent,< 100 DM,3518,6
+GER-0036,1,0,0.4242,31,Male,Single,1 - 4 Years,For Free,< 100 DM,6110,48
+GER-0391,1,1,0.687,19,Female,Divorced/Separated,< 1 Year,Rent,>= 1000 DM,983,12
+GER-0381,0,0,0.4016,38,Female,Divorced/Separated,Unemployed,For Free,< 100 DM,12976,18
+GER-0694,1,1,0.9162,28,Male,Single,4 - 7 Years,Own,< 100 DM,2284,24
+GER-0378,0,0,0.1481,57,Male,Single,>= 7 Years,For Free,< 100 DM,14318,36
+GER-0133,1,1,0.5259,47,Male,Single,1 - 4 Years,For Free,< 100 DM,1984,18
+GER-0480,1,1,0.88,23,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,3573,12
+GER-0870,1,1,0.9055,40,Female,Divorced/Separated,4 - 7 Years,Own,500 - 1000 DM,7678,36
+GER-0389,1,1,0.8402,27,Female,Divorced/Separated,4 - 7 Years,Own,< 100 DM,1449,9
+GER-0491,0,0,0.1747,42,Female,Divorced/Separated,>= 7 Years,For Free,< 100 DM,8318,27
+GER-0047,1,1,0.8164,23,Female,Divorced/Separated,Unemployed,Rent,500 - 1000 DM,1352,6
+GER-0217,1,1,0.566,23,Male,Single,1 - 4 Years,Own,< 100 DM,3913,36
+GER-0834,0,1,0.8073,25,Female,Divorced/Separated,< 1 Year,Own,< 100 DM,2327,15
+GER-0061,1,1,0.9668,50,Male,Single,>= 7 Years,Own,Unknown / No Savings,1537,15
+GER-0866,1,1,0.6006,27,Female,Divorced/Separated,< 1 Year,Own,< 100 DM,2389,18
+GER-0871,1,1,0.9537,46,Male,Single,>= 7 Years,Own,< 100 DM,1343,6
+GER-0511,1,1,0.9351,32,Male,Single,1 - 4 Years,For Free,< 100 DM,4686,36
+GER-0352,1,1,0.9827,38,Male,Single,Unemployed,Own,Unknown / No Savings,3229,18
+GER-0031,1,0,0.4787,27,Male,Single,1 - 4 Years,Own,< 100 DM,4020,24
+GER-0746,1,0,0.4927,23,Female,Divorced/Separated,Unemployed,Rent,< 100 DM,2511,15
+GER-0374,0,0,0.185,60,Female,Divorced/Separated,>= 7 Years,For Free,100 - 500 DM,14782,60
+GER-0050,1,1,0.6488,29,Male,Single,< 1 Year,Own,Unknown / No Savings,2333,24
+GER-0674,0,1,0.5906,41,Male,Single,< 1 Year,Own,500 - 1000 DM,2580,21
+GER-0395,1,0,0.3118,32,Male,Single,4 - 7 Years,Rent,100 - 500 DM,11760,39
+GER-0390,1,1,0.771,30,Male,Married,1 - 4 Years,Own,< 100 DM,1820,18
+GER-0175,0,1,0.8596,53,Female,Divorced/Separated,Unemployed,Own,Unknown / No Savings,7485,30
+GER-0850,0,0,0.3658,33,Male,Married,1 - 4 Years,Rent,< 100 DM,2235,20
+GER-0321,0,0,0.1481,32,Male,Divorced/Separated,< 1 Year,Own,< 100 DM,1938,24
+GER-0165,1,1,0.9706,32,Male,Single,1 - 4 Years,Own,500 - 1000 DM,2978,6
+GER-0978,0,1,0.9218,47,Male,Single,>= 7 Years,Own,< 100 DM,2538,24
+GER-0376,1,1,0.9171,34,Male,Married,Unemployed,Own,< 100 DM,2320,18
+GER-0430,1,1,0.9527,74,Male,Single,4 - 7 Years,Own,< 100 DM,3448,5
+GER-0060,1,1,0.8993,27,Male,Married,1 - 4 Years,Own,< 100 DM,1391,9
+GER-0071,1,1,0.9813,46,Male,Single,>= 7 Years,Rent,Unknown / No Savings,730,7
+GER-0070,1,1,0.6408,30,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,8133,36
+GER-0554,1,1,0.7828,67,Female,Divorced/Separated,4 - 7 Years,Own,< 100 DM,1199,9
+GER-0188,0,1,0.6876,20,Male,Married,4 - 7 Years,Own,100 - 500 DM,674,12
+GER-0683,1,1,0.8755,47,Male,Married,< 1 Year,For Free,< 100 DM,5103,24
+GER-0214,1,1,0.9809,51,Male,Single,>= 7 Years,Own,Unknown / No Savings,3342,36
+GER-0814,0,0,0.2266,46,Male,Single,4 - 7 Years,For Free,< 100 DM,3931,48
+GER-0947,1,1,0.9371,38,Male,Single,Unemployed,Own,Unknown / No Savings,2859,12
+GER-0080,0,1,0.9416,44,Female,Divorced/Separated,< 1 Year,Own,Unknown / No Savings,5943,24
+GER-0447,1,1,0.9502,35,Male,Single,1 - 4 Years,Own,< 100 DM,2576,7
+GER-0631,0,0,0.2003,44,Male,Single,1 - 4 Years,Own,< 100 DM,1553,18
+GER-0941,1,1,0.8944,31,Male,Single,1 - 4 Years,Own,< 100 DM,1546,10
+GER-0544,1,1,0.9662,61,Male,Single,>= 7 Years,Own,< 100 DM,1255,12
+GER-0829,1,1,0.5103,38,Male,Single,1 - 4 Years,For Free,Unknown / No Savings,6681,48
+GER-0785,1,1,0.7827,35,Male,Single,1 - 4 Years,Own,>= 1000 DM,1941,18
+GER-0929,1,0,0.3705,43,Male,Single,1 - 4 Years,Own,< 100 DM,1344,12
+GER-0486,1,1,0.9617,52,Male,Single,1 - 4 Years,Own,< 100 DM,3077,12
+GER-0876,1,0,0.1947,36,Male,Single,< 1 Year,For Free,< 100 DM,1940,18
+GER-0721,0,0,0.4973,24,Female,Divorced/Separated,< 1 Year,Rent,>= 1000 DM,433,6
+GER-0340,1,0,0.2745,24,Female,Divorced/Separated,< 1 Year,For Free,< 100 DM,5743,24
+GER-0125,1,0,0.4823,30,Male,Single,1 - 4 Years,Own,< 100 DM,2121,12
+GER-0212,0,0,0.314,50,Male,Single,Unemployed,Own,< 100 DM,5293,27
+GER-0262,1,1,0.6699,36,Male,Single,>= 7 Years,For Free,< 100 DM,5302,18
+GER-0812,0,1,0.5794,24,Male,Single,4 - 7 Years,Own,< 100 DM,9629,36
+GER-0100,1,1,0.92,41,Male,Married,>= 7 Years,Rent,100 - 500 DM,1469,24
+GER-0341,1,1,0.5931,26,Female,Divorced/Separated,4 - 7 Years,Rent,< 100 DM,3599,21
+GER-0892,1,1,0.5673,38,Male,Single,1 - 4 Years,Own,< 100 DM,2171,12
+GER-0263,1,1,0.76,57,Female,Divorced/Separated,>= 7 Years,For Free,< 100 DM,2748,12
+GER-0818,1,0,0.1878,43,Male,Divorced/Separated,Unemployed,Own,< 100 DM,15857,36
+GER-0164,1,1,0.8695,36,Male,Single,>= 7 Years,Own,500 - 1000 DM,909,36
+GER-0357,0,1,0.7068,26,Male,Single,1 - 4 Years,Own,< 100 DM,4463,36
+GER-0696,1,1,0.8757,29,Male,Single,4 - 7 Years,Own,< 100 DM,1103,12
+GER-0561,0,1,0.5224,24,Male,Single,4 - 7 Years,Rent,< 100 DM,1546,24
+GER-0619,1,1,0.7855,49,Male,Divorced/Separated,1 - 4 Years,Own,< 100 DM,640,12
+GER-0444,0,0,0.2982,30,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,5096,48
+GER-0680,1,1,0.8622,56,Female,Divorced/Separated,< 1 Year,Own,< 100 DM,1538,6
+GER-0299,1,1,0.8282,32,Male,Single,4 - 7 Years,Own,>= 1000 DM,2745,21
+GER-0157,1,0,0.3343,45,Male,Married,>= 7 Years,Own,< 100 DM,339,12
+GER-0320,0,0,0.477,28,Male,Married,Unemployed,Own,< 100 DM,4249,30
+GER-0596,0,0,0.2091,23,Female,Divorced/Separated,4 - 7 Years,Rent,< 100 DM,1442,24
+GER-0220,1,1,0.81,26,Male,Married,< 1 Year,Own,< 100 DM,625,12
+GER-0914,0,0,0.2652,31,Male,Single,1 - 4 Years,Rent,< 100 DM,3161,24
+GER-0394,1,1,0.9434,31,Male,Single,Unemployed,Own,< 100 DM,2406,9
+GER-0983,0,1,0.5001,26,Male,Single,1 - 4 Years,Own,< 100 DM,8229,36
+GER-0198,1,1,0.8047,36,Male,Single,>= 7 Years,For Free,Unknown / No Savings,2760,24
+GER-0952,0,1,0.7208,28,Female,Divorced/Separated,< 1 Year,Rent,500 - 1000 DM,4113,24
+GER-0048,1,1,0.8673,39,Male,Single,1 - 4 Years,Own,< 100 DM,7228,11
+GER-0269,1,1,0.9101,25,Male,Single,>= 7 Years,Own,Unknown / No Savings,999,24
+GER-0875,1,1,0.7166,40,Female,Divorced/Separated,1 - 4 Years,Own,>= 1000 DM,1322,11
+GER-0348,1,1,0.9579,34,Male,Single,1 - 4 Years,Own,100 - 500 DM,1743,6
+GER-0152,1,1,0.6927,24,Male,Single,1 - 4 Years,Own,< 100 DM,5848,36
+GER-0065,1,1,0.888,48,Male,Single,>= 7 Years,Own,Unknown / No Savings,5190,27
+GER-0122,1,1,0.9038,24,Male,Single,1 - 4 Years,Rent,< 100 DM,1768,12
+GER-0356,1,1,0.986,49,Male,Single,>= 7 Years,Own,Unknown / No Savings,2331,12
+GER-0077,1,1,0.792,51,Male,Single,4 - 7 Years,Own,< 100 DM,4771,11
+GER-0779,1,1,0.7225,67,Female,Divorced/Separated,Unemployed,Own,< 100 DM,3872,18
+GER-0654,1,1,0.9889,35,Male,Single,4 - 7 Years,Own,< 100 DM,2346,24
+GER-0804,1,1,0.5814,24,Female,Divorced/Separated,Unemployed,Rent,Unknown / No Savings,7472,12
+GER-0207,1,1,0.7949,26,Male,Single,4 - 7 Years,Own,< 100 DM,1424,12
+GER-0627,0,1,0.6277,29,Male,Single,4 - 7 Years,Own,100 - 500 DM,1437,9
+GER-0924,0,0,0.4294,55,Male,Divorced/Separated,< 1 Year,Own,< 100 DM,6872,24
+GER-0371,1,1,0.9474,33,Male,Single,>= 7 Years,Own,< 100 DM,6070,18
+GER-0543,0,1,0.9504,34,Male,Single,1 - 4 Years,Own,< 100 DM,2864,18
+GER-0468,1,1,0.6893,26,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,2764,33
+GER-0440,1,1,0.9247,39,Male,Single,>= 7 Years,Own,< 100 DM,1884,12
+GER-0732,1,1,0.8265,44,Female,Divorced/Separated,4 - 7 Years,Own,< 100 DM,760,8
+GER-0244,1,1,0.881,35,Female,Divorced/Separated,1 - 4 Years,Own,500 - 1000 DM,3447,12
+GER-0347,1,1,0.5475,23,Female,Divorced/Separated,Unemployed,Rent,500 - 1000 DM,3758,24
+GER-0477,1,0,0.4796,25,Male,Single,4 - 7 Years,Own,< 100 DM,5152,24
+GER-0365,1,1,0.9413,36,Male,Single,4 - 7 Years,Own,< 100 DM,1542,12
+GER-0532,1,1,0.9644,41,Male,Married,1 - 4 Years,Rent,< 100 DM,1503,12
+GER-0907,1,1,0.779,27,Male,Married,1 - 4 Years,Own,Unknown / No Savings,3711,36
+GER-0989,1,1,0.5969,48,Male,Single,>= 7 Years,Own,< 100 DM,1743,24
+GER-0257,0,1,0.5567,29,Male,Divorced/Separated,1 - 4 Years,For Free,< 100 DM,2149,12
+GER-0676,1,1,0.9463,33,Male,Single,>= 7 Years,Own,< 100 DM,5150,24
+GER-0386,1,1,0.8108,21,Female,Divorced/Separated,< 1 Year,Rent,Unknown / No Savings,1126,18
+GER-0131,0,0,0.1572,29,Male,Single,1 - 4 Years,Own,< 100 DM,6887,36
+GER-0067,1,0,0.4903,22,Male,Married,1 - 4 Years,Own,>= 1000 DM,1007,12
+GER-0918,0,1,0.7117,33,Male,Divorced/Separated,Unemployed,Own,100 - 500 DM,2359,24
+GER-0310,1,1,0.522,40,Male,Single,Unemployed,For Free,Unknown / No Savings,5381,48
+GER-0260,1,1,0.7432,27,Male,Single,1 - 4 Years,Own,< 100 DM,1657,12
+GER-0467,1,1,0.8247,32,Male,Single,>= 7 Years,Own,Unknown / No Savings,7238,48
+GER-0768,1,1,0.8544,28,Male,Single,>= 7 Years,Rent,< 100 DM,3617,12
+GER-0638,1,1,0.833,34,Female,Divorced/Separated,< 1 Year,Own,< 100 DM,1493,12
+GER-0280,1,1,0.9568,23,Male,Single,>= 7 Years,Rent,>= 1000 DM,3368,15
+GER-0810,1,1,0.7553,26,Male,Married,< 1 Year,Own,< 100 DM,907,8
+GER-0006,1,1,0.977,53,Male,Single,>= 7 Years,Own,500 - 1000 DM,2835,24
+GER-0010,0,0,0.1545,25,Female,Divorced/Separated,< 1 Year,Rent,< 100 DM,1295,12
+GER-0985,1,1,0.641,25,Female,Divorced/Separated,1 - 4 Years,Rent,< 100 DM,1433,15
+GER-0195,0,1,0.8875,34,Female,Divorced/Separated,>= 7 Years,Own,< 100 DM,1501,9
+GER-0540,0,1,0.7357,23,Male,Married,< 1 Year,Rent,< 100 DM,1534,12
+GER-0634,0,0,0.1793,25,Female,Divorced/Separated,< 1 Year,Own,< 100 DM,1355,24
+GER-0727,0,0,0.2609,25,Female,Divorced/Separated,1 - 4 Years,Rent,< 100 DM,1882,18
+GER-0687,1,1,0.5056,30,Male,Single,>= 7 Years,For Free,100 - 500 DM,2862,36
+GER-0495,0,1,0.8813,20,Male,Married,1 - 4 Years,Own,Unknown / No Savings,2996,24
+GER-0211,1,1,0.9674,45,Female,Divorced/Separated,>= 7 Years,Own,Unknown / No Savings,3835,36
+GER-0635,1,1,0.7185,47,Male,Single,>= 7 Years,Own,< 100 DM,1393,12
+GER-0572,1,1,0.8775,26,Female,Divorced/Separated,Unemployed,Rent,Unknown / No Savings,5433,24
+GER-0743,1,1,0.6636,22,Male,Single,1 - 4 Years,Own,500 - 1000 DM,2483,24
+GER-0162,1,1,0.97,36,Male,Single,4 - 7 Years,Own,500 - 1000 DM,1262,15
+GER-0091,1,1,0.8759,54,Male,Single,>= 7 Years,Own,< 100 DM,1409,12
+GER-0869,1,0,0.2641,24,Female,Divorced/Separated,>= 7 Years,Rent,< 100 DM,652,12
+GER-0141,1,0,0.2476,30,Female,Divorced/Separated,< 1 Year,Own,< 100 DM,4795,36
+GER-0238,1,1,0.9527,35,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,1291,12
+GER-0368,0,0,0.3025,42,Male,Single,>= 7 Years,Own,< 100 DM,3446,36
+GER-0461,1,1,0.6608,36,Male,Single,< 1 Year,Own,< 100 DM,1721,15
+GER-0835,0,0,0.1337,48,Male,Single,1 - 4 Years,Own,< 100 DM,1082,12
+GER-0134,1,1,0.71,21,Female,Divorced/Separated,4 - 7 Years,Own,100 - 500 DM,10144,60
+GER-0588,0,1,0.5922,47,Male,Married,1 - 4 Years,Own,< 100 DM,1217,18
+GER-0815,1,0,0.2429,54,Female,Divorced/Separated,1 - 4 Years,Rent,< 100 DM,7432,36
+GER-0653,0,1,0.5782,42,Male,Single,>= 7 Years,Own,100 - 500 DM,8086,36
+GER-0868,1,1,0.8841,37,Male,Single,>= 7 Years,Own,Unknown / No Savings,7409,36
+GER-0004,0,0,0.3224,53,Male,Single,1 - 4 Years,For Free,< 100 DM,4870,24
+GER-0250,1,1,0.9323,39,Female,Divorced/Separated,4 - 7 Years,Own,>= 1000 DM,666,6
+GER-0087,0,0,0.2086,47,Male,Single,1 - 4 Years,For Free,100 - 500 DM,12612,36
+GER-0112,1,0,0.4161,28,Male,Single,4 - 7 Years,Rent,< 100 DM,6260,18
+GER-0128,1,1,0.8769,34,Male,Single,Unemployed,Own,< 100 DM,1860,12
+GER-0736,0,0,0.4196,23,Female,Divorced/Separated,1 - 4 Years,Rent,< 100 DM,11560,24
+GER-0580,0,0,0.4661,30,Male,Single,>= 7 Years,Own,< 100 DM,1056,18
+GER-0154,1,1,0.667,36,Male,Single,4 - 7 Years,Rent,100 - 500 DM,6967,24
+GER-0718,1,1,0.9216,31,Male,Single,1 - 4 Years,Own,Unknown / No Savings,3148,24
+GER-0333,0,1,0.5969,24,Female,Divorced/Separated,1 - 4 Years,Rent,100 - 500 DM,11590,48
+GER-0788,0,0,0.1358,50,Male,Single,>= 7 Years,For Free,< 100 DM,6224,48
+GER-0301,0,1,0.6087,42,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,3804,36
+GER-0261,1,0,0.347,55,Female,Divorced/Separated,>= 7 Years,Own,< 100 DM,1603,24
+GER-0194,0,1,0.7404,21,Male,Single,1 - 4 Years,Rent,100 - 500 DM,3031,45
+GER-0418,1,1,0.7767,31,Female,Divorced/Separated,4 - 7 Years,Own,500 - 1000 DM,2782,21
+GER-0024,1,1,0.9558,26,Male,Married,1 - 4 Years,Own,Unknown / No Savings,2069,10
+GER-0481,1,0,0.2157,26,Male,Single,< 1 Year,Own,< 100 DM,1201,24
+GER-0969,1,1,0.914,40,Male,Single,1 - 4 Years,Own,< 100 DM,3939,11
+GER-0186,0,1,0.658,74,Female,Divorced/Separated,>= 7 Years,For Free,< 100 DM,5129,9
+GER-0528,0,0,0.2075,31,Male,Divorced/Separated,1 - 4 Years,Rent,< 100 DM,2302,36
+GER-0383,1,1,0.586,26,Male,Single,< 1 Year,Own,< 100 DM,1330,12
+GER-0025,1,1,0.9021,36,Male,Single,1 - 4 Years,Own,< 100 DM,1374,6
+GER-0297,1,1,0.8548,45,Male,Single,>= 7 Years,Own,Unknown / No Savings,1287,10
+GER-0630,1,1,0.5896,28,Female,Divorced/Separated,1 - 4 Years,Own,< 100 DM,3660,24
+GER-0798,1,1,0.9463,54,Male,Married,>= 7 Years,Own,Unknown / No Savings,717,24
+GER-0138,1,1,0.8694,35,Male,Single,4 - 7 Years,Own,Unknown / No Savings,2728,15
+GER-0442,1,1,0.6729,29,Male,Single,1 - 4 Years,Own,< 100 DM,2629,20
+GER-0153,1,1,0.6952,29,Female,Divorced/Separated,>= 7 Years,Rent,>= 1000 DM,7758,24
+GER-0325,1,1,0.9328,39,Male,Single,4 - 7 Years,Own,< 100 DM,3398,8
+GER-0738,1,1,0.9294,45,Male,Single,4 - 7 Years,Own,< 100 DM,6761,6
