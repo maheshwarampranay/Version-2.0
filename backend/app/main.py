@@ -81,7 +81,7 @@ def get_default_adult_analysis(model_type: str = "baseline"):
         
         pred_col = "pred_mitigated" if model_type == "mitigated" else "pred_baseline"
         prob_col = "prob_mitigated" if model_type == "mitigated" else "prob_baseline"
-        model_name = "Adult Income Classifier (Fairness Mitigated)" if model_type == "mitigated" else "Adult Income Classifier (Random Forest Baseline)"
+        model_name = "Adult Income Classifier (XGBoost - Bias Mitigated)" if model_type == "mitigated" else "Adult Income Classifier (XGBoost Baseline - Unaware)"
         
         if pred_col not in df.columns:
             pred_col = "Approval_Decision" if "Approval_Decision" in df.columns else df.columns[1]
@@ -95,7 +95,7 @@ def get_default_adult_analysis(model_type: str = "baseline"):
             pred_col=pred_col,
             prob_col=prob_col,
             protected_cols=[c for c in ["sex", "race", "age_group"] if c in df.columns],
-            reference_groups={"sex": "Male", "race": "White", "age_group": "Middle (30-50)"},
+            reference_groups={"sex": "Male", "race": "White", "age_group": "35-44"},
             risk_tier="high"
         )
         return run_analysis(req)

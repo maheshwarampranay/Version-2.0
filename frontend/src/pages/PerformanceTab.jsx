@@ -22,7 +22,7 @@ export default function PerformanceTab({ analysisData }) {
         <StatCard label="Specificity" value={`${(performance.specificity * 100).toFixed(1)}%`} icon={AlertTriangle} color="#64748b" />
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '24px', marginBottom: '24px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px', marginBottom: '24px' }}>
         {/* 2. Confusion Matrix */}
         <div style={{
           background: 'var(--color-surface)',
@@ -37,8 +37,8 @@ export default function PerformanceTab({ analysisData }) {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '12px',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            gap: '16px',
             textAlign: 'center'
           }}>
             <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', padding: '16px', borderRadius: '8px' }}>
@@ -91,7 +91,8 @@ export default function PerformanceTab({ analysisData }) {
           </div>
         </div>
 
-        {/* 3. Fairness vs Accuracy Trade-off Evaluator */}
+        {/* 3. Fairness vs Accuracy Trade-off Evaluator (Temporarily hidden from UI display) */}
+        {/*
         <div style={{
           background: 'var(--color-surface)',
           border: '1px solid var(--color-border)',
@@ -115,6 +116,7 @@ export default function PerformanceTab({ analysisData }) {
 
           <TradeoffChart tradeoffData={tradeoff_analysis} optimalThreshold={optimal_threshold} />
         </div>
+        */}
       </div>
     </div>
   );

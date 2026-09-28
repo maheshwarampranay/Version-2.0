@@ -58,7 +58,7 @@ export default function Header({ analysisData, modelType, onToggleModelType }) {
                 transition: 'all 0.2s ease'
               }}
             >
-              ✨ Bias Mitigated
+              Bias Mitigated
             </button>
           </div>
         )}
