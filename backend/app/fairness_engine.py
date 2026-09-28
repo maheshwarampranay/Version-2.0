@@ -96,6 +96,21 @@ def compute_performance_metrics(
         }
     }
 
+def parse_binary_array(series: pd.Series, threshold: float = 0.5) -> np.ndarray:
+    """Converts continuous, string, or boolean series into binary 0/1 array safely."""
+    if pd.api.types.is_string_dtype(series) or pd.api.types.is_object_dtype(series):
+        vals = series.astype(str).str.lower().str.strip()
+        return np.where(vals.isin(['1', 'true', 'approved', 'good', 'yes', 'pass', 'default', '1.0']), 1, 0)
+    
+    try:
+        arr = series.to_numpy(dtype=float, na_value=0.0)
+        if not np.array_equal(arr, arr.astype(int)):
+            return (arr >= threshold).astype(int)
+        return arr.astype(int)
+    except Exception:
+        vals = series.astype(str).str.lower().str.strip()
+        return np.where(vals.isin(['1', 'true', 'approved', 'good', 'yes', 'pass', 'default', '1.0']), 1, 0)
+
 def audit_protected_attribute(
     df: pd.DataFrame,
     attribute_col: str,
@@ -121,8 +136,8 @@ def audit_protected_attribute(
     if reference_group is None or reference_group not in unique_groups:
         reference_group = auto_ref if auto_ref in unique_groups else unique_groups[0]
 
-    y_true = df[target_col].astype(int).values
-    y_pred = df[pred_col].astype(int).values
+    y_true = parse_binary_array(df[target_col])
+    y_pred = parse_binary_array(df[pred_col])
 
     # Compute single group stats
     group_stats = {}
@@ -261,8 +276,8 @@ def compute_subgroup_analysis(
     Computes subgroup analysis across single attributes (1-way) and pairwise combinations (2-way).
     """
     subgroup_results = []
-    y_true = df[target_col].astype(int).values
-    y_pred = df[pred_col].astype(int).values
+    y_true = parse_binary_array(df[target_col])
+    y_pred = parse_binary_array(df[pred_col])
     total_n = len(df)
 
     # Prepare binned series for protected attributes

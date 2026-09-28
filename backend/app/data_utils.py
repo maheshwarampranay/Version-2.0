@@ -8,7 +8,7 @@ from typing import Dict, List, Tuple, Any, Optional
 DATA_SETS: Dict[str, pd.DataFrame] = {}
 
 BENCHMARK_DATA_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "..", "Working-Dir-New", "data", "credit_data.csv")
+    os.path.join(os.path.dirname(__file__), "..", "..", "data", "adult_income.csv")
 )
 
 def store_dataframe(df: pd.DataFrame, filename: str) -> Tuple[str, Dict[str, Any]]:
@@ -34,17 +34,23 @@ def store_dataframe(df: pd.DataFrame, filename: str) -> Tuple[str, Dict[str, Any
         col_lower = col.lower()
         if 'default' in col_lower or 'ground' in col_lower or 'actual' in col_lower or 'true' in col_lower or col == 'Default_12M':
             suggested_target = col
-        elif 'decision' in col_lower or 'pred' in col_lower or 'approval' in col_lower or col == 'Approval_Decision':
-            suggested_pred = col
-        elif 'prob' in col_lower or 'score' in col_lower and df[col].dtype in ['float64', 'float32']:
+        elif 'prob' in col_lower or ('score' in col_lower and pd.api.types.is_numeric_dtype(df[col])):
             suggested_prob = col
-        
-        # Check if categorical/protected attribute candidate
-        if col in ['Age', 'Marital_Status', 'Education', 'Employment_Type', 'State', 'City_Tier', 'Gender', 'Ethnicity', 'Race']:
-            suggested_protected.append(col)
-        elif df[col].nunique() >= 2 and df[col].nunique() <= 10 and col not in [suggested_target, suggested_pred]:
-            if col not in suggested_protected:
-                suggested_protected.append(col)
+        elif 'decision' in col_lower or 'pred' in col_lower or 'approval' in col_lower or col == 'Approval_Decision':
+            if df[col].nunique() == 2 and not suggested_pred:
+                suggested_pred = col
+
+    # Fallbacks if not auto-detected
+    if not suggested_target:
+        for col in columns:
+            if df[col].nunique() == 2:
+                suggested_target = col
+                break
+    if not suggested_pred:
+        for col in columns:
+            if df[col].nunique() == 2 and col != suggested_target:
+                suggested_pred = col
+                break
 
     sample_data = df.head(5).to_dict(orient='records')
     

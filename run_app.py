@@ -3,6 +3,21 @@ import subprocess
 import sys
 import time
 
+def ensure_backend_requirements(backend_dir):
+    print("[0/2] Verifying Python package dependencies...")
+    requirements_file = os.path.join(backend_dir, "requirements.txt")
+    try:
+        import fastapi
+        import uvicorn
+        import pandas
+        import sklearn
+    except ImportError:
+        print("Missing required Python packages. Installing from requirements.txt...")
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", "-r", requirements_file]
+        )
+        print("✔ Python dependencies installed successfully.")
+
 def main():
     print("=" * 60)
     print("      LLOYDS BIAS & FAIRNESS PIPELINE STARTER")
@@ -11,6 +26,8 @@ def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     backend_dir = os.path.join(base_dir, "backend")
     frontend_dir = os.path.join(base_dir, "frontend")
+
+    ensure_backend_requirements(backend_dir)
 
     print("\n[1/2] Launching FastAPI Backend on http://localhost:8000 ...")
     backend_proc = subprocess.Popen(
@@ -27,7 +44,7 @@ def main():
         shell=True
     )
 
-    print("\n✔ Application running! Access the UI at: http://localhost:3000")
+    print("\n[OK] Application running! Access the UI at: http://localhost:3000")
     print("Press Ctrl+C to terminate both servers.")
 
     try:

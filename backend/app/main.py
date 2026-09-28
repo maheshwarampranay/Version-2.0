@@ -1,6 +1,7 @@
 import os
 import io
 import uuid
+import numpy as np
 import pandas as pd
 from typing import Dict, Any
 from fastapi import FastAPI, UploadFile, File, HTTPException, Response
@@ -67,6 +68,40 @@ def load_sample():
         return meta
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to load sample dataset: {str(e)}")
+
+@app.get("/api/default-adult-analysis", response_model=AnalysisResponse)
+@app.get("/api/adult-analysis", response_model=AnalysisResponse)
+def get_default_adult_analysis(model_type: str = "baseline"):
+    """
+    Returns default fairness audit and subgroup analysis for Adult Income Dataset.
+    """
+    try:
+        file_id, meta = load_benchmark_dataset()
+        df = get_dataframe(file_id)
+        
+        pred_col = "pred_mitigated" if model_type == "mitigated" else "pred_baseline"
+        prob_col = "prob_mitigated" if model_type == "mitigated" else "prob_baseline"
+        model_name = "Adult Income Classifier (Fairness Mitigated)" if model_type == "mitigated" else "Adult Income Classifier (Random Forest Baseline)"
+        
+        if pred_col not in df.columns:
+            pred_col = "Approval_Decision" if "Approval_Decision" in df.columns else df.columns[1]
+        if prob_col not in df.columns:
+            prob_col = None
+
+        req = AnalysisRequest(
+            file_id=file_id,
+            model_name=model_name,
+            target_col="income_high" if "income_high" in df.columns else meta["suggested_target"],
+            pred_col=pred_col,
+            prob_col=prob_col,
+            protected_cols=[c for c in ["sex", "race", "age_group"] if c in df.columns],
+            reference_groups={"sex": "Male", "race": "White", "age_group": "Middle (30-50)"},
+            risk_tier="high"
+        )
+        return run_analysis(req)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch adult analysis: {str(e)}")
+
 
 @app.post("/api/analyze", response_model=AnalysisResponse)
 def run_analysis(req: AnalysisRequest):

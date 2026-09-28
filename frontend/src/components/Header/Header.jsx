@@ -1,7 +1,7 @@
 import React from 'react';
 import StatusBadge from '../StatusBadge';
 
-export default function Header({ analysisData }) {
+export default function Header({ analysisData, modelType, onToggleModelType }) {
   if (!analysisData) return null;
 
   return (
@@ -25,7 +25,44 @@ export default function Header({ analysisData }) {
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+        {onToggleModelType && (
+          <div style={{ display: 'flex', background: '#f1f5f9', padding: '3px', borderRadius: '8px', border: '1px solid #cbd5e1' }}>
+            <button
+              onClick={() => onToggleModelType('baseline')}
+              style={{
+                padding: '6px 14px',
+                borderRadius: '6px',
+                border: 'none',
+                background: modelType === 'baseline' ? '#005A36' : 'transparent',
+                color: modelType === 'baseline' ? '#ffffff' : '#475569',
+                fontWeight: '700',
+                fontSize: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              Baseline Model
+            </button>
+            <button
+              onClick={() => onToggleModelType('mitigated')}
+              style={{
+                padding: '6px 14px',
+                borderRadius: '6px',
+                border: 'none',
+                background: modelType === 'mitigated' ? '#005A36' : 'transparent',
+                color: modelType === 'mitigated' ? '#ffffff' : '#475569',
+                fontWeight: '700',
+                fontSize: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              ✨ Bias Mitigated
+            </button>
+          </div>
+        )}
+
         <div>
           <div style={{ fontSize: '11px', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase' }}>
             Risk Tier
@@ -40,7 +77,7 @@ export default function Header({ analysisData }) {
             Total Samples
           </div>
           <div style={{ fontSize: '13px', fontWeight: '700', color: 'var(--color-text-secondary)' }}>
-            {analysisData.total_samples.toLocaleString()}
+            {analysisData.total_samples ? analysisData.total_samples.toLocaleString() : 0}
           </div>
         </div>
 
@@ -60,3 +97,4 @@ export default function Header({ analysisData }) {
     </div>
   );
 }
+

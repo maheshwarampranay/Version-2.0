@@ -18,7 +18,7 @@ export default function ModelSetupPage({ onAnalysisComplete }) {
   const [riskTier, setRiskTier] = useState('moderate');
 
   const handleFileUpload = async (e) => {
-    const file = e.target.files[0];
+    const file = e.target ? e.target.files[0] : (e.files ? e.files[0] : e);
     if (!file) return;
     setLoading(true);
     setError(null);
@@ -26,7 +26,12 @@ export default function ModelSetupPage({ onAnalysisComplete }) {
       const meta = await uploadDataset(file);
       populateMeta(meta);
     } catch (err) {
-      setError(err.response?.data?.detail || 'Failed to upload dataset');
+      const msg = err.response?.data?.detail || err.message || 'Failed to upload dataset';
+      if (err.message === 'Network Error') {
+        setError('Network Error: Please make sure the backend server is running (python run_app.py or uvicorn on port 8000).');
+      } else {
+        setError(msg);
+      }
     } finally {
       setLoading(false);
     }
@@ -39,7 +44,12 @@ export default function ModelSetupPage({ onAnalysisComplete }) {
       const meta = await loadBenchmarkData();
       populateMeta(meta);
     } catch (err) {
-      setError(err.response?.data?.detail || 'Failed to load benchmark dataset');
+      const msg = err.response?.data?.detail || err.message || 'Failed to load benchmark dataset';
+      if (err.message === 'Network Error') {
+        setError('Network Error: Please make sure the backend server is running (python run_app.py or uvicorn on port 8000).');
+      } else {
+        setError(msg);
+      }
     } finally {
       setLoading(false);
     }

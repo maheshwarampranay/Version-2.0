@@ -12,9 +12,8 @@ export const apiClient = axios.create({
 export const uploadDataset = async (file) => {
   const formData = new FormData();
   formData.append('file', file);
-  const response = await apiClient.post('/upload', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-  });
+  // Use raw axios.post so browser automatically appends multipart boundary
+  const response = await axios.post(`${API_BASE_URL}/upload`, formData);
   return response.data;
 };
 
@@ -30,3 +29,9 @@ export const runFairnessAnalysis = async (payload) => {
 
 export const getReportHtmlUrl = (analysisId) => `${API_BASE_URL}/report/html/${analysisId}`;
 export const getReportPdfUrl = (analysisId) => `${API_BASE_URL}/report/pdf/${analysisId}`;
+
+export const fetchDefaultAdultAnalysis = async (modelType = 'baseline') => {
+  const response = await apiClient.get(`/adult-analysis?model_type=${modelType}`);
+  return response.data;
+};
+
